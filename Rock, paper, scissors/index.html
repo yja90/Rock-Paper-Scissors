@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock, paper, scissors</title>
+</head>
+
+<body>
+  <p>Hello world</p>
+
+  <script type="text/javascript">
+
+    // Allows computer to play by choosing a random value
+    function computerPlay() {
+      let computerChoice = ["Rock", "Paper", "Scissors"]
+      let randomChoice = Math.floor(Math.random() * computerChoice.length);
+      return (randomChoice, computerChoice[randomChoice]);
+
+    }
+    // Function will capitalise first letter and put the remainder of string in lowercase
+    function capitalize(promptValue) {
+      let capFirstLetter = promptValue.slice(0, 1).toUpperCase() + promptValue.slice(1).toLowerCase(1)
+      return (capFirstLetter)
+    }
+
+    // Plays one round of Rock, Paper, Scissors
+    function playRound(p, c) {
+      if (capitalize(p) == "Rock" && c === "Scissors") {
+        return 1
+      } else if (capitalize(p) == "Rock" && c == "Paper") {
+        return 0
+      } else if (capitalize(p) == "Rock" && c == "Rock") {
+        return 0
+      } else if (capitalize(p) == "Scissors" && c == "Rock") {
+        return 0
+      } else if (capitalize(p) == "Scissors" && c == "Paper") {
+        return 1
+      } else if (capitalize(p) == "Scissors" && c == "Scissors") {
+        return 0
+      } else if (capitalize(p) == "Paper" && c == "Scissors") {
+        return 0
+      } else if (capitalize(p) == "Paper" && c == "Rock") {
+        return 1
+      } else if (capitalize(p) == "Paper" && c == "Paper") {
+        return 0
+      }
+    }
+
+    // return 1 for every time player wins, if player does not have 5 after 5 round, return an
+
+    function game(){
+      let computerSelection = computerPlay()
+      let computerSelection2 = computerPlay()
+      let computerSelection3 = computerPlay()
+      let computerSelection4 = computerPlay()
+      let computerSelection5 = computerPlay()
+      let playerSelection = prompt("Round 1, please chose either rock, paper or scissors?")
+      if (playRound(playerSelection, computerSelection) == 1){
+      alert("You win, computer chose " + computerSelection + "!")
+         console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + computerSelection + "!")
+      }
+      let playerSelection2 = prompt("Round 2, what is your weapon of choice?")
+      if (playRound(playerSelection2,computerSelection2) == 1){
+      alert("You win, computer chose " + computerSelection2 + "!")
+        console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + computerSelection2 + "!")
+      }
+      let playerSelection3 = prompt("Round 3, what will it be?")
+      if (playRound(playerSelection3, computerSelection3) == 1){
+      alert("You win, computer chose " + computerSelection3 + "!")
+        console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + computerSelection3 + "!")
+      }
+      let playerSelection4 = prompt("Round 4, hit me with it?")
+      if (playRound(playerSelection4, computerSelection4) == 1){
+      alert("You win, computer chose " + computerSelection4 + "!")
+        console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + computerSelection4 + "!")
+      }
+      let playerSelection5 = prompt("Final round, what will it be?")
+      if (playRound(playerSelection5, computerSelection5) == 1){
+      alert("You win, computer chose " + computerSelection5 + "!")
+        console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + computerSelection5 + "!")
+      }
+let result = playRound(playerSelection, computerSelection) + playRound(playerSelection2,computerSelection2) + playRound(playerSelection3, computerSelection3) + playRound(playerSelection4, computerSelection4) + playRound(playerSelection5, computerSelection5);
+parseInt(result);
+if (result >= 3){
+  alert("You won more rounds than the computer, well played!")
+} else {
+  alert("Sorry, you didn't win enough rounds. You lose.")
+}
+
+}
+
+    // let playerSelection = prompt("Please choose either rock, paper or scissors?")
+
+    console.log(game());
+  </script>
+
+
+
+
+
+</body>
+
+</html>
