@@ -16,15 +16,15 @@
     // Allows computer to play by choosing a random value
     function computerPlay() {
       let computerChoice = ["Rock", "Paper", "Scissors"]
-      let randomChoice = Math.floor(Math.random() * computerChoice.length);
-      return (randomChoice, computerChoice[randomChoice]);
-
-    }
+      let randomChoice = Math.floor(Math.random() * computerChoice.length)
+      return (randomChoice, computerChoice[randomChoice])
+    };
+    
     // Function will capitalise first letter and put the remainder of string in lowercase
     function capitalize(promptValue) {
       let capFirstLetter = promptValue.slice(0, 1).toUpperCase() + promptValue.slice(1).toLowerCase(1)
       return (capFirstLetter)
-    }
+    };
 
     // Plays one round of Rock, Paper, Scissors
     function playRound(p, c) {
@@ -47,7 +47,7 @@
       } else if (capitalize(p) == "Paper" && c == "Paper") {
         return 0
       }
-    }
+    };
 
     // Plays each round and logs score if player wins
     function resultOfRound(playerS, compS) {
@@ -57,7 +57,7 @@
       } else {
         alert("Unlucky, computer chose " + compS + "!")
       }
-    }
+    };
 
 
     function game() {
@@ -96,7 +96,7 @@
         alert("Sorry, you didn't win enough rounds. You lose.")
       }
 
-    }
+    };
 
 
 
