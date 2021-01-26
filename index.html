@@ -7,10 +7,12 @@
 </head>
 
 <body>
-  <p>Refresh your page to play</p>
+<h1>A simple game of rock paper scissors.</h1>
+<h2>Refresh the page to play</h2>
 
   <script type="text/javascript">
-
+    
+    
     // Allows computer to play by choosing a random value
     function computerPlay() {
       let computerChoice = ["Rock", "Paper", "Scissors"]
@@ -47,60 +49,56 @@
       }
     }
 
-    
+    // Function keeps a log of score for each round
+    function resultOfRound(playerS, compS) {
+      if (playRound(playerS, compS) == 1) {
+        alert("You win, computer chose " + compS + "!")
+        console.log(1)
+      } else {
+        alert("Unlucky, computer chose " + compS + "!")
+      }
+    }
 
-    function game(){
+
+    function game() {
+      // Round 1
       let computerSelection = computerPlay()
-      let computerSelection2 = computerPlay()
-      let computerSelection3 = computerPlay()
-      let computerSelection4 = computerPlay()
-      let computerSelection5 = computerPlay()
       let playerSelection = prompt("Round 1, please chose either rock, paper or scissors?")
-      if (playRound(playerSelection, computerSelection) == 1){
-      alert("You win, computer chose " + computerSelection + "!")
-         console.log(1)
-      } else {
-        alert("Unlucky, computer chose " + computerSelection + "!")
-      }
+      resultOfRound(playerSelection, computerSelection)
+
+      //Round 2
+      let computerSelection2 = computerPlay()
       let playerSelection2 = prompt("Round 2, what is your weapon of choice?")
-      if (playRound(playerSelection2,computerSelection2) == 1){
-      alert("You win, computer chose " + computerSelection2 + "!")
-        console.log(1)
-      } else {
-        alert("Unlucky, computer chose " + computerSelection2 + "!")
-      }
+      resultOfRound(playerSelection2, computerSelection2)
+
+      //Round 3
+      let computerSelection3 = computerPlay()
       let playerSelection3 = prompt("Round 3, what will it be?")
-      if (playRound(playerSelection3, computerSelection3) == 1){
-      alert("You win, computer chose " + computerSelection3 + "!")
-        console.log(1)
-      } else {
-        alert("Unlucky, computer chose " + computerSelection3 + "!")
-      }
+      resultOfRound(playerSelection3, computerSelection3)
+
+      //Round 4
+      let computerSelection4 = computerPlay()
       let playerSelection4 = prompt("Round 4, hit me with it?")
-      if (playRound(playerSelection4, computerSelection4) == 1){
-      alert("You win, computer chose " + computerSelection4 + "!")
-        console.log(1)
-      } else {
-        alert("Unlucky, computer chose " + computerSelection4 + "!")
-      }
+      resultOfRound(playerSelection4, computerSelection4)
+
+      //Round 5
+      let computerSelection5 = computerPlay()
       let playerSelection5 = prompt("Final round, what will it be?")
-      if (playRound(playerSelection5, computerSelection5) == 1){
-      alert("You win, computer chose " + computerSelection5 + "!")
-        console.log(1)
+      resultOfRound(playerSelection5, computerSelection5)
+
+      // Result
+      let endResult = playRound(playerSelection, computerSelection) + playRound(playerSelection2, computerSelection2) + playRound(playerSelection3, computerSelection3) + playRound(playerSelection4, computerSelection4) + playRound(playerSelection5,
+        computerSelection5);
+      parseInt(endResult);
+      if (endResult >= 3) {
+        alert("You won more rounds than the computer, well played!")
       } else {
-        alert("Unlucky, computer chose " + computerSelection5 + "!")
+        alert("Sorry, you didn't win enough rounds. You lose.")
       }
-let result = playRound(playerSelection, computerSelection) + playRound(playerSelection2,computerSelection2) + playRound(playerSelection3, computerSelection3) + playRound(playerSelection4, computerSelection4) + playRound(playerSelection5, computerSelection5);
-parseInt(result);
-if (result >= 3){
-  alert("You won more rounds than the computer, well played!")
-} else {
-  alert("Sorry, you didn't win enough rounds. You lose.")
-}
 
-}
+    }
 
-    
+
 
     console.log(game());
   </script>
