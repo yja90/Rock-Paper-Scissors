@@ -7,102 +7,86 @@
 </head>
 
 <body>
-<h1>A simple game of rock paper scissors.</h1>
-<h2>Refresh the page to play</h2>
+  <h1>A simple game of rock paper scissors.</h1>
+  <h2>Refresh the page to play</h2>
 
   <script type="text/javascript">
-    
-    
     // Allows computer to play by choosing a random value
     function computerPlay() {
       let computerChoice = ["Rock", "Paper", "Scissors"]
-      let randomChoice = Math.floor(Math.random() * computerChoice.length)
-      return (randomChoice, computerChoice[randomChoice])
-    };
-    
+      let randomChoice = Math.floor(Math.random() * computerChoice.length);
+      return (randomChoice, computerChoice[randomChoice]);
+
+    }
     // Function will capitalise first letter and put the remainder of string in lowercase
     function capitalize(promptValue) {
       let capFirstLetter = promptValue.slice(0, 1).toUpperCase() + promptValue.slice(1).toLowerCase(1)
       return (capFirstLetter)
-    };
+    }
+    // Global variables
+    let playerScore = 0;
+    let compScore = 0;
+    let totalGamesToPlay = 5
+    let gamesPlayed = 0
+
 
     // Plays one round of Rock, Paper, Scissors
     function playRound(p, c) {
+
       if (capitalize(p) == "Rock" && c === "Scissors") {
-        return 1
+        alert("You win, computer went for Scissors")
+        return playerScore++, gamesPlayed++
       } else if (capitalize(p) == "Rock" && c == "Paper") {
-        return 0
+        alert("Unlucky, computer went for paper")
+        return compScore++, gamesPlayed++
       } else if (capitalize(p) == "Rock" && c == "Rock") {
-        return 0
+        alert("It was a draw, both chose rock!")
+        return playerScore++, compScore++, gamesPlayed++
       } else if (capitalize(p) == "Scissors" && c == "Rock") {
-        return 0
+        alert("Unlucky, computer chose rock!")
+        return compScore++, gamesPlayed++
       } else if (capitalize(p) == "Scissors" && c == "Paper") {
-        return 1
+        alert("Well played, computer chose paper!")
+        return playerScore++, gamesPlayed++
       } else if (capitalize(p) == "Scissors" && c == "Scissors") {
-        return 0
+        alert("It was a draw, both chose scissors")
+        return playerScore++, compScore++, gamesPlayed++
       } else if (capitalize(p) == "Paper" && c == "Scissors") {
-        return 0
+        alert("Unlucky, computer chose scissors")
+        return compScore++, gamesPlayed++
       } else if (capitalize(p) == "Paper" && c == "Rock") {
-        return 1
+        alert("Well played, computer chose rock")
+        return playerScore++, gamesPlayed++
       } else if (capitalize(p) == "Paper" && c == "Paper") {
-        return 0
+        alert("it was a draw, both chose paper")
+        return playerScore++, compScore++, gamesPlayed++
       }
-    };
+    }
 
-    // Plays each round and logs score if player wins
-    function resultOfRound(playerS, compS) {
-      if (playRound(playerS, compS) == 1) {
-        alert("You win, computer chose " + compS + "!")
-        console.log(1)
-      } else {
-        alert("Unlucky, computer chose " + compS + "!")
-      }
-    };
 
+    // Plays five rounds of rock, paper, scissors
 
     function game() {
-      // Round 1
-      let computerSelection = computerPlay()
-      let playerSelection = prompt("Round 1, please choose either rock, paper or scissors?")
-      resultOfRound(playerSelection, computerSelection)
-
-      //Round 2
-      let computerSelection2 = computerPlay()
-      let playerSelection2 = prompt("Round 2, what is your weapon of choice?")
-      resultOfRound(playerSelection2, computerSelection2)
-
-      //Round 3
-      let computerSelection3 = computerPlay()
-      let playerSelection3 = prompt("Round 3, what will it be?")
-      resultOfRound(playerSelection3, computerSelection3)
-
-      //Round 4
-      let computerSelection4 = computerPlay()
-      let playerSelection4 = prompt("Round 4, hit me with it?")
-      resultOfRound(playerSelection4, computerSelection4)
-
-      //Round 5
-      let computerSelection5 = computerPlay()
-      let playerSelection5 = prompt("Final round, what will it be?")
-      resultOfRound(playerSelection5, computerSelection5)
-
-      // Result
-      let endResult = playRound(playerSelection, computerSelection) + playRound(playerSelection2, computerSelection2) + playRound(playerSelection3, computerSelection3) + playRound(playerSelection4, computerSelection4) + playRound(playerSelection5,
-        computerSelection5);
-      parseInt(endResult);
-      if (endResult >= 3) {
+      for (i = 0; i < 5; i++) {
+        let computerSelection = computerPlay()
+        let playerSelection = prompt("Please chose either rock, paper or scissors?")
+        playRound(playerSelection, computerSelection)
+        if (!playerSelection) break; // do I need this break?
+      }
+      alert("After 5 rounds, you won " + playerScore + " points, and computer won " + compScore + "points")
+      if (playerScore > compScore) {
         alert("You won more rounds than the computer, well played!")
+      } else if (playerScore == compScore) {
+        alert("It was draw, bad luck!")
       } else {
-        alert("Sorry, you didn't win enough rounds. You lose.")
+        alert("Computer wins, bad luck!")
       }
 
-    };
-
+    }
 
 
     console.log(game());
   </script>
-
 
 
 
