@@ -1,0 +1,173 @@
+.gameScore {
+  background-color: blue;
+}
+
+.heading {
+  font-size: 50px;
+  word-spacing: 200px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.result {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+
+
+.playerSelectionContainer {
+  text-align: center;
+}
+
+.rockContainer {
+  float: left;
+  background: #6495ED;
+  width: 33.3%;
+  height: 280px;
+
+}
+
+.paperContainer {
+  float: left;
+  background: #6495ED;
+  width: 33.3%;
+  height: 280px;
+outline: solid 5px #f1f1f2;
+}
+.scissorContainer {
+  float: right;
+  background: #6495ED;
+  width: 33.4%;
+  height: 280px;
+  outline: solid 5px #f1f1f2;
+}
+
+.playerScoreContainer {
+  float: left;
+text-align: right;
+  width: 50%;
+  height: 100px;
+  position: relative;
+  top: 20px;
+}
+
+.compScoreContainer{
+text-align: left;
+    float: right;
+    width: 50%;
+    height: 100px;
+    position: relative;
+    top: 20px;
+}
+
+.gameScoreP {
+  margin-right: 50px;
+}
+
+.scoreText1{
+  margin-right: 50px;
+}
+
+.scoreText2{
+  margin-left: 50px;
+}
+
+
+
+.gameScoreC {
+  margin-left: 50px;
+}
+
+.rockButton {
+  /* margin: 0 50px 0 50px; */
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent url(images/rock.png) no-repeat center top;
+  text-indent: -1000em;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.paperButton {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent url(images/paper.png) no-repeat center top;
+  text-indent: -1000em;
+  cursor: pointer;
+  outline: none;
+}
+
+.scissorButton {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent url(images/scissors.png) no-repeat center top;
+  text-indent: -1000em;
+  cursor: pointer;
+  outline: none;
+
+}
+
+.resetButtonContainer {
+  position: absolute;
+  white-space: nowrap;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 72.5%;
+}
+
+
+body {
+text-align: center;
+font-family: 'Roboto', sans-serif;
+background-color: #f1f1f2;
+  margin: 5px;
+}
+
+.copyRight {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.instructionContainer {
+  display: inline-block;
+
+}
+
+.scoreContainer {
+  position: absolute;
+  white-space: nowrap;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 75%;
+
+
+
+}
+/* hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 5px;
+  border-color: grey;
+  width: 5%;
+} */
