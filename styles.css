@@ -30,7 +30,7 @@ margin: 0;
 padding: 0;
 }
 .borderContainer {
-
+background-color: #DCDCDC;
 border: 3px solid white;
 border-radius: 20%;
 text-align: center;
@@ -60,6 +60,7 @@ margin: 0;
 padding: 0;
 }
 .borderContainer2 {
+  background-color: #DCDCDC;
   border: 3px solid white;
   border-radius: 20%;
 text-align: center;
