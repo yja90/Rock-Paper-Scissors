@@ -11,49 +11,30 @@
 <link href="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" <body>
 
-<div class="rockContainer">
+<!-- <div class="rockContainer">
   <h1 class="heading">Rock</h1>
-  <button id="rock" class="rockButton" type="submit"> Rock </button>
+
 </div>
 <div class="paperContainer">
   <h1 class="heading">Paper</h1>
-  <button id="paper" class="paperButton">Paper</button>
+
 </div>
 <div class="scissorContainer">
   <h1 class="heading">Scissors</h1>
-  <button id="scissors" class=scissorButton>Scissors</button>
-</div>
+
+</div> -->
+<h1 class="heading">Rock Paper Scissors</h1>
+
 <div class="instructionContainer">
   <h3 class="instructions">Start the game by making a selection</h3>
 </div>
 
-<div class="resetButtonContainer">
-  <button id="resetButton" class="resetButton">Restart</button>
-</div>
-
-
-
-
-
-
-<div class="playerSelectionContainer">
-
-
-
-</div>
-
-<div id="playerSelctionContainer">
-  <h3 id="playersSelection"></h3>
-</div>
-
-<div id="compSelectionContainer">
-  <h3 id=compsSelection>Computer chose:</h3>
-  <h3 id="sameSelection"></h3>
-</div>
 <div id="resultContainer">
   <h1 id="result" class="result"> </h1>
 </div>
+
 <div class="scoreContainer">
+<div class="borderContainer">
   <div id="playerScoreContainer" class="playerScoreContainer">
 
     <div class="scoreText1">
@@ -61,13 +42,43 @@
     </div>
     <h1 id="gameScoreP" class="gameScoreP">0</h1>
   </div>
+  <div id="playerSelctionContainer" class="playerSelectionContainer">
+    <!-- <h3 class="playersSelectionTex">Player chose:</h3> -->
+    <img class="playersSelectionImg" id="playersSelection" src="" alt="">
+  </div>
+</div>
 
+<div class="borderContainer2">
   <div id="compScoreContainer" class="compScoreContainer">
     <div class="scoreText2">
-      <h1>Computer's score</h1>
+      <h1>Opponent score</h1>
     </div>
     <h1 id="gameScoreC" class="gameScoreC"> 0</h1>
   </div>
+</div>
+<div id="compSelectionContainer" class="compSelectionContainer">
+  <!-- <h3 class="compsSelectionText">Computer chose:</h3> -->
+  <img class="compsSelectionImg" id="compsSelection" src="" alt="">
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="SelectionButtonContainers">
+  <button id="rock" class="rockButton" type="submit"> Rock </button>
+  <button id="paper" class="paperButton">Paper</button>
+  <button id="scissors" class=scissorButton>Scissors</button>
+</div>
+
+
+
+<h3 id="sameSelection"></h3>
+<div class="resetButtonContainer">
+  <button id="resetButton" class="resetButton">Play again</button>
 </div>
 
 
