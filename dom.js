@@ -24,7 +24,7 @@ function playRound(playerSelection) {
 
   if (playerSelection == "Rock" && computerSelection === "Scissors") {
     playerScore++
-    gameScoreP.style.color = 'green'
+    gameScoreP.style.color = '#00FF00'
     gameScoreC.style.color = null
     sameSelection.textContent = null
     compsSelection.src = "images/scissors.png"
@@ -32,7 +32,7 @@ function playRound(playerSelection) {
     resultContent()
   } else if (playerSelection == "Rock" && computerSelection == "Paper") {
     compScore++
-    gameScoreC.style.color = 'red'
+    gameScoreC.style.color = '#8B0000'
     gameScoreP.style.color = null
     sameSelection.textContent = null
     playersSelection.src = "images/rock.png"
@@ -48,7 +48,7 @@ function playRound(playerSelection) {
   } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
     compScore++
     sameSelection.textContent = null
-    gameScoreC.style.color = 'red'
+    gameScoreC.style.color = '#8B0000'
     gameScoreP.style.color = null
     compsSelection.src = "images/rock.png"
     playersSelection.src = "images/scissors.png"
@@ -56,7 +56,7 @@ function playRound(playerSelection) {
   } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
     playerScore++
     sameSelection.textContent = null
-    gameScoreP.style.color = 'green'
+    gameScoreP.style.color = '#00FF00'
     gameScoreC.style.color = null
     compsSelection.src = "images/paper.png"
     playersSelection.src = "images/scissors.png"
@@ -72,14 +72,14 @@ function playRound(playerSelection) {
     compScore++;
     sameSelection.textContent = null
     gameScoreP.style.color = null
-    gameScoreC.style.color = 'red'
+    gameScoreC.style.color = '#8B0000'
     compsSelection.src = "images/scissors.png"
     playersSelection.src = "images/paper.png"
     resultContent()
   } else if (playerSelection == "Paper" && computerSelection == "Rock") {
     playerScore++;
     sameSelection.textContent = null
-    gameScoreP.style.color = 'green'
+    gameScoreP.style.color = '#00FF00'
     gameScoreC.style.color = null
     compsSelection.src = "images/rock.png"
     playersSelection.src = "images/paper.png"
