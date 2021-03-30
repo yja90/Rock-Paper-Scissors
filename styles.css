@@ -21,15 +21,16 @@
   position: relative;
   left: 22px;
 }
-.playerSelectionContainer {
+/* .playerSelectionContainer {
+
+
 height: 150px;
 position: absolute;
 top: 55%;
 left:30%;
 margin: 0;
 padding: 0;
-}
-
+} */
 .borderContainer {
 background-color: #4169E1;
 border: 3px solid white;
@@ -39,6 +40,7 @@ text-align: center;
   right:75%;
   height: 300px;
 position: absolute;
+
 margin: 0;
 padding: 0;
 }
@@ -52,29 +54,41 @@ padding: 0;
   position: relative;
   right: 22px;
 }
+/* .compSelectionContainer {
 
-.compSelectionContainer {
+
 height: 150px;
 position: absolute;
 top: 50%;
 right:17%;
 margin: 0;
 padding: 0;
-}
-
+} */
 .borderContainer2 {
   background-color: #4169E1;
   border: 3px solid white;
   border-radius: 20%;
-text-align: center;
-  width: 20%;
-  left:75%;
-  height: 300px;
-position: absolute;
-margin: 0;
-padding: 0;
-}
+  text-align: center;
+    width: 20%;
+    left :75%;
+    height: 300px;
+  position: absolute;
 
+  margin: 0;
+  padding: 0;
+
+}
+/* background-color: #4169E1;
+border: 3px solid white;
+border-radius: 20%;
+text-align: center;
+width: 20%;
+left:75%;
+height: 300px;
+position: absolute;
+
+margin: 0;
+padding: 0; */
 /* .compScoreContainer{
 text-align: center;
     float: right;
@@ -100,29 +114,25 @@ text-align: center;
 
 
 .playersSelectionImg {
- position: absolute;
+ display: block;
  margin-left: auto;
  margin-right: auto;
- left: 0;
- right: 0;
  top: 10%;
 }
 
 
 
 .compsSelectionImg {
-  position: absolute;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  left: 0;
-  right: 0;
   top: 10%;
 }
 
 .gameScoreP {
-  margin-right: 50px;
-  position: relative;
-  top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
 }
 
@@ -219,7 +229,6 @@ background-color: white;
   margin-right: auto;
   left: 0;
   right: 0;
- 
 
 }
 
