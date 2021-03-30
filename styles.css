@@ -22,8 +22,6 @@
   left: 22px;
 }
 .playerSelectionContainer {
-
-
 height: 150px;
 position: absolute;
 top: 55%;
@@ -31,6 +29,7 @@ left:30%;
 margin: 0;
 padding: 0;
 }
+
 .borderContainer {
 background-color: #4169E1;
 border: 3px solid white;
@@ -40,7 +39,6 @@ text-align: center;
   right:75%;
   height: 300px;
 position: absolute;
-
 margin: 0;
 padding: 0;
 }
@@ -54,9 +52,8 @@ padding: 0;
   position: relative;
   right: 22px;
 }
+
 .compSelectionContainer {
-
-
 height: 150px;
 position: absolute;
 top: 50%;
@@ -64,6 +61,7 @@ right:17%;
 margin: 0;
 padding: 0;
 }
+
 .borderContainer2 {
   background-color: #4169E1;
   border: 3px solid white;
@@ -73,10 +71,10 @@ text-align: center;
   left:75%;
   height: 300px;
 position: absolute;
-
 margin: 0;
 padding: 0;
 }
+
 /* .compScoreContainer{
 text-align: center;
     float: right;
@@ -107,7 +105,7 @@ text-align: center;
  margin-right: auto;
  left: 0;
  right: 0;
- top: 25px;
+ top: 10%;
 }
 
 
@@ -118,7 +116,7 @@ text-align: center;
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 25px;
+  top: 10%;
 }
 
 .gameScoreP {
