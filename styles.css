@@ -87,20 +87,6 @@ body {
   font-weight: 300;
 }
 
-.playersSelectionImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 10%;
-}
-
-.compsSelectionImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: 10%;
-}
-
 .gameScoreP {
   display: block;
   margin-left: auto;
