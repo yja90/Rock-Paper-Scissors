@@ -9,71 +9,62 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" <body>
-  
-<h1 class="heading">Rock Paper Scissors</h1>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-<div class="instructionContainer">
-  <h3 class="instructions">Start the game by making a selection</h3>
-</div>
+<body>
 
-<div id="resultContainer">
-  <h1 id="result" class="result"> </h1>
-</div>
 
-<div class="borderContainer">
+  <h1 class="heading">Rock Paper Scissors</h1>
 
- 
-      <h1 class = "scoreText">Your Score</h1>
-   
+  <div class="instructionContainer">
+    <h3 id="instructions">Start the game by making a selection</h3>
+  </div>
+
+  <!-- Displays the winner of the game -->
+  <div id="resultContainer">
+    <h1 id="result" class="result"></h1>
+  </div>
+
+  <!-- Displays the players score and their selection -->
+  <div class="playerContainer">
+    <h1 class="scoreText">Your Score</h1>
     <h1 id="gameScoreP" class="gameScoreP">0</h1>
-
- 
-
     <img class="playersSelectionImg" id="playersSelection" src="" alt="">
- 
-</div>
+  </div>
 
-<div class="borderContainer2">
-      <h1 class = "gameScoreP">Opponent score</h1>
-
+  <!-- Displays the computers score and their selection -->
+  <div class="compContainer">
+    <h1 class="scoreText">Opponent score</h1>
     <h1 id="gameScoreC" class="gameScoreP"> 0</h1>
-  
-  <img class="compsSelectionImg" id="compsSelection" src="" alt="">
-</div>
+    <img class="compsSelectionImg" id="compsSelection" src="" alt="">
+  </div>
 
+  <!-- Buttons that allow player to make selection -->
+  <div class="SelectionButtonContainers">
+    <button id="rock" class="rockButton"> Rock </button>
+    <button id="paper" class="paperButton">Paper</button>
+    <button id="scissors" class=scissorButton>Scissors</button>
+  </div>
 
+  <!-- Displays text for result of each round -->
+  <div class="">
+    <h3 id="resultOfRound"></h3>
+    <h3 id="resultOfRound2"> </h3>
+  </div>
 
+  <!-- Button that allows you to resart the game -->
+  <div class="resetButtonContainer">
+    <button id="resetButton" class="resetButton">Restart game</button>
+  </div>
 
+  <div class="copyRight">
+    <a target="_blank" class="iconsLink" </a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+  </div>
 
+  <script src="dom.js">
 
-
-<div class="SelectionButtonContainers">
-  <button id="rock" class="rockButton" type="submit"> Rock </button>
-  <button id="paper" class="paperButton">Paper</button>
-  <button id="scissors" class=scissorButton>Scissors</button>
-</div>
-
-
-
-<h3 id="sameSelection"></h3>
-<div class="resetButtonContainer">
-  <button id="resetButton" class="resetButton">Play again</button>
-</div>
-
-
-
-
-
-
-
-<div class="copyRight">
-  <a target="_blank" class="iconsLink" </a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-
-</div>
-<script src="dom.js">
-
-</script>
+  </script>
 
 </body>
 
