@@ -107,7 +107,7 @@ function playRound(playerSelection) {
     resetButton.style.top = '45%'
     disableContent()
   } else if (compScore === 5) {
-    result.textContent = 'Computer wins!'
+    result.textContent = 'Opponent wins!'
     disableContent()
     resetButton.style.top = '45%'
   } else {
